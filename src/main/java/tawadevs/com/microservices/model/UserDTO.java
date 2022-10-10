@@ -1,5 +1,7 @@
 package tawadevs.com.microservices.model;
 
+import org.springframework.hateoas.RepresentationModel;
+
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import lombok.NonNull;
@@ -10,7 +12,7 @@ import lombok.ToString;
 @ToString
 @NoArgsConstructor
 @RequiredArgsConstructor
-public class UserDTO {
+public class UserDTO extends RepresentationModel<UserDTO> {
 	@NonNull
 	private Integer id;
 	@NonNull
